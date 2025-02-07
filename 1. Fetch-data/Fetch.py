@@ -1,11 +1,9 @@
 import PyPDF2
 
-def fetch_text(path):
-
+def fetch_text(path: str) -> [str]:
     with open(path, 'rb') as pdf:
         reader = PyPDF2.PdfReader(pdf, strict=False)
         fetched_txt = []
-
         for page in reader.pages:
             txt = page.extract_text()
             fetched_txt.append(txt)
