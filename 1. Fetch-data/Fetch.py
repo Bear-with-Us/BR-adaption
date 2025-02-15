@@ -43,6 +43,6 @@ def fetch_image(path: str, folder: str) -> None:
 
 if '__main__' == __name__:
     txt = fetch_text('UnderstandingDeepLearning_11_21_24_C.pdf')
-    fetch_image('UnderstandingDeepLearning_11_21_24_C.pdf')
+    fetch_image('UnderstandingDeepLearning_11_21_24_C.pdf', 'images')
     for word in txt:
         print(word)
